@@ -1,0 +1,29 @@
+<template name="Login">  
+<script type="text/javascript">
+  document.body.style.backgroundImage = "url('capture.jpg')";
+</script>
+<div id="wrapper">
+  <form id="login-user">
+
+    <fieldset id="login-user-pass">
+      <legend>Login Screen</legend>
+      <label for="login-user-username">User Name</label>
+      <input type="text" id="login-username" tabindex=1>
+
+      <label for="login-user-password">Password</label>
+      <input type="password" id="login-password" tabindex=2>
+
+      <label for="login-user-organization">Organization</label>
+      <input type="text" id="login-organization" tabindex=3>
+    </fieldset>
+
+     <input type="submit" value="Log In!" tabindex=4 style="float: right;margin-top: 5px;">
+    {{> new_user}}
+
+  </form>
+</div>
+</template>  
+
+<template name="new_user">
+<span> New user</span>
+</template>

@@ -1,0 +1,164 @@
+<body>
+	<head>
+		<title>API Model Canvas</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+	</head>
+</body>
+
+
+
+
+
+
+
+
+<template name="main">
+ 		<div id="impress">
+			<div class="no-support-message">
+				Your browser doesn't support impress.js.  Try Chrome or Safari.
+			</div>
+			<script type="text/javascript">
+  			document.body.style.backgroundImage = "";
+			</script>
+			<!-- This is the definition of the various clickable fields in the API Model Canvas (AMC). -->
+			<map name="tiles">
+				<!--<area shape="rect" coords="356,87,521,201" href="#strategy-details" title="Strategy" alt="Strategy" target=""/>-->
+				<area shape="rect" coords="395,90,570,208" href="#strategy-details" title="Strategy" alt="Strategy" target=""/>
+				<area shape="rect" coords="395,207,570,328" href="#APIdescription-details" title="API description" alt="API description" target=""/>
+				<area shape="rect" coords="395,	329,570,468" href="#APIdesign-details" title="APIdesign" alt="APIdesign" target=""/>
+				<area shape="rect" coords="43,	89,	216,467" href="#KeyPartners-details" title="KeyPartners" alt="KeyPartners" target=""/>
+				<area shape="rect" coords="218,	90,	392,275" href="#KeyActivities-details" title="KeyActivities" alt="KeyActivities" target=""/>
+				<area shape="rect" coords="218,	277,392,467" href="#KeyResources-details" title="KeyResources" alt="KeyResources" target=""/>
+				<area shape="rect" coords="571,	90,	746,275" href="#DevRelations-details" title="DevRelations" alt="DevRelations" target=""/>
+				<area shape="rect" coords="571,	278,746,467" href="#DevProgram-details" title="DevProgram" alt="DevProgram" target=""/>
+				<area shape="rect" coords="748,	90,	922,467" href="#DevSegmentation-details" title="DevSegmentation" alt="DevSegmentation" target=""/>
+				<area shape="rect" coords="43,	470,479,607" href="#Cost-details" title="Cost" alt="Cost" target=""/>
+				<area shape="rect" coords="482,	470,923,607" href="#InFlowMetrics-details" title="InFlowMetrics" alt="InFlowMetrics" target=""/>
+			</map>
+			
+			<!-- Starting point: The API Model Canvas overview -->
+			<div id="highlevel" class="step" data-x="0" data-y="0"> 				
+				<img src="/API-Model-Canvas.png" width="100%" alt="API Model Canvas" usemap="#tiles">
+				<div align="right">
+					<table id="underCanvas">
+					<tr>
+						<td>
+							<a href="http://www.3scale.net/" target="_blank">
+							<img src="/3scale-2015-color-300.png" width="150" alt="3scale logo">
+							</a>
+						</td>
+						<td>
+							
+							<a href="Introduction.html">Introduction</a>
+							<a href="Help.html">Help</a>
+							<a href="About.html">About</a>
+						</td>
+					</tr>
+					</table>
+				</div>
+			</div>
+			
+			<!-- Overview flowing through all the fields of the AMC -->
+			<div id="strategy" class="step" 		data-x="8" 		data-y="-162" data-scale="0.4"></div>			
+			<div id="APIdescription" class="step" 	data-x="14" 	data-y="-46" data-scale="0.4"></div>			
+			<div id="APIdesign" class="step" 		data-x="13" 	data-y="90" data-scale="0.4"></div>				
+			<div id="KeyPartners" class="step" 		data-x="-345" 	data-y="-140" data-scale="0.4"></div>			
+			<div id="KeyActivities" class="step" 	data-x="-165" 	data-y="-128" data-scale="0.4">	</div>			
+			<div id="KeyResources" class="step" 	data-x="-165" 	data-y="58" data-scale="0.4"></div>
+			<div id="DevRelations" class="step" 	data-x="188" 	data-y="-128" data-scale="0.4"></div>
+			<div id="DevProgram" class="step" 		data-x="188" 	data-y="58" data-scale="0.4"></div>
+			<div id="DevSegmentation" class="step" 	data-x="367" 	data-y="-140" data-scale="0.4"></div>
+			<div id="Cost" class="step" 			data-x="-208" 	data-y="224" data-scale="0.4"></div>
+			<div id="InFlowMetrics" class="step" 	data-x="243" 	data-y="224" data-scale="0.4"></div>
+			
+		
+			<!-- ************************************ -->
+			<!-- Strategy field details -->
+			<div id="strategy-details" class="step slide" data-x="-20" data-y="-2000" data-scale="0.1">
+				{{> strategy}}
+				<a href="#highlevel">Back to Canvas</a>
+			</div>
+			
+			<!-- API Description field details -->
+			<div id="APIdescription-details" class="step slide" data-x="-200" data-y="-1000" data-scale="0.3">
+				{{> description}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- API Design field details -->
+			<div id="APIdesign-details" class="step slide" data-x="200" data-y="-500" data-scale="0.2">
+				{{> apidesign}}
+				<a href="#highlevel">Back to Canvas</a>
+			</div>
+			
+			<!-- Key Partners field details -->
+			<div id="KeyPartners-details" class="step slide" data-x="-500" data-y="-1200" data-scale="0.1" data-rotate="45">
+				{{> key_partners}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- Key Activities field details -->
+			<div id="KeyActivities-details" class="step slide" data-x="-800" data-y="-600" data-scale="0.3">
+				{{> key_activities}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+						
+			<!-- Key Resources field details -->
+			<div id="KeyResources-details" class="step slide" data-x="-700" data-y="100" data-scale="0.3">
+				{{> key_resources}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- Developer Relations field details -->
+			<div id="DevRelations-details" class="step slide" data-x="500" data-y="800" data-scale="0.1" data-rotate="-45">
+				{{> dev_relations}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- Developer Program field details -->
+			<div id="DevProgram-details" class="step slide" data-x="800" data-y="200" data-scale="0.3">
+				{{> dev_program}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- Developer Segmentation field details -->
+			<div id="DevSegmentation-details" class="step slide" data-x="700" data-y="-300" data-scale="0.3">
+				{{> dev_segmentation}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- Cost field details -->
+			<div id="Cost-details" class="step slide" data-x="-300" data-y="900" data-scale="0.5" data-rotate="45">
+				{{> costs}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+			<!-- In-Flow Metrics field details -->
+			<div id="InFlowMetrics-details" class="step slide" data-x="300" data-y="600" data-scale="0.3">
+				{{> inflow}}
+				<a href="#highlevel">Back to Canvas</a>				
+			</div>
+			
+		
+			<!--
+			<div class="step" data-x="0" data-y="-800" data-rotate="90">
+				This is slide 5 and it rotates in.
+			</div>
+			
+			<div class="step" data-x="-100" data-y="-800" data-rotate-x="60" data-rotate-y="60" data-rotate-z="30">
+				This is slide 6 and it has a 3D transition.
+			</div>
+			
+			<div class="step" data-x="-2600" data-y="-800" data-rotate-x="30" data-rotate-y="-60" data-rotate-z="90" data-scale="4">
+				This is slide 7 and it has a 3D transition AND a scale.
+			</div>
+			-->
+			
+		</div>
+		
+		<script type="text/javascript" >
+		console.log("Launching impress");
+		impress().init();
+		</script>
+	
+</template>

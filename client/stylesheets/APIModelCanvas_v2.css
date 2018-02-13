@@ -1,0 +1,81 @@
+.no-support-message { display:none; }
+.impress-not-supported .no-support-message { display:block; }
+
+/* additional styles just to make things look a bit nicer */
+body { 
+	/*background:#F4F4F8; */
+	font:16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetic
+a, Arial, "Lucida Grande", sans-serif; color:#333; 
+	margin: 0px;
+}
+
+a:link {
+    color: #595858;
+}
+
+a:visited {
+    color: #f16000;
+}
+
+table#underCanvas {
+    width:97.5%;
+	
+}
+
+table#underCanvas td:nth-child(odd) {
+   text-align: left;
+}
+
+table#underCanvas td:nth-child(even) {
+    text-align: right;
+	vertical-align: text-top;
+}
+
+.copy{ 
+	background-color: white;
+	font:16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetic
+a, Arial, "Lucida Grande", sans-serif; color: #333; 
+}
+
+.copyWithMargin{ 
+	background-color: white;
+	font:16px/24px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetic
+a, Arial, "Lucida Grande", sans-serif; color: #333; 
+	margin: 10px;
+}
+
+iframe {
+	width:790px;
+	height: 100%;
+}
+
+iframe[seamless] {
+	display: block;
+	border: none;
+}
+
+iframe:focus { 
+    outline: none;
+}
+
+
+
+.step { 
+	width:940px; 
+	margin:0 auto 24px auto; 
+	text-align:left; 
+}
+
+.slide {
+    display: block;
+
+    width: 790px;
+    height: 687px;
+    padding: 20px 20px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+  
+}

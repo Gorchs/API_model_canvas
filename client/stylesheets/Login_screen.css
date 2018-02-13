@@ -1,0 +1,55 @@
+:focus {
+  background: grey;
+  color:white;
+}
+
+
+legend
+{font-weight: bolder}
+
+#wrapper
+{
+	
+    height:     auto;       
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#create-user, #login-user
+{ 
+	position:fixed; 
+	top:25%;
+	width:233px; 
+	height:auto; 
+	display:block; 
+	background-color: white;
+	padding:5px;	
+} 
+
+#create-user-pass, #login-user-pass
+{ 
+
+ 
+	width:200px; 
+	height:auto; 
+	display:block; 
+}
+
+#create-user-org, #login-user-org
+{ 
+
+ 
+	width:200px; 
+	height:auto; 
+	display:block; 
+}
+
+#login_header
+{
+
+	background-color: #F05A00;
+}

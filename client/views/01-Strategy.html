@@ -1,0 +1,95 @@
+<body>
+<head>
+	<link href="APIModelCanvas_v2.css" rel="stylesheet" />
+</head>
+	
+</body>
+<template name="strategy">
+<div class="copy">
+<h2>Strategy for the API and Objectives</h2>
+
+
+<p>The establishment of an API program starts with very serious thinking about strategy on a much higher level - namely, the organization's business strategy.</p>
+ 
+<p>Because leveraging the benefits of the API Economy is not a standalone endeavor, it needs to be rooted in the business strategy of the organization. Exposing assets (data or services) via APIs is only meaningful and beneficial if it is in line with the overarching business strategy.</p> 
+
+<p>The strategy for the API field also includes the definition of the scope of the API (public, partner, or private) and who the users are.</p>
+
+<h3>Important Questions</h3>
+<ul style="list-style-type: circle;">
+	<li>Why do you want to expose APIs via an API program?</li>
+	<li>What do you want to achieve with the API program?</li>
+	<li>How should the API program be designed to achieve that?</li>
+	<li>Is the program fully embedded in the organization's overarching business strategy?</li>
+	<li>Does the program contribute measurably to the organization's objectives?</li>
+	<li>What API use cases does your API program cover? For more on typical API use cases, see the "<a href="http://www.3scale.net/api-economy/ebooks/winning-in-the-api-economy/">Winning in the API Economy</a>" ebook.</li>
+	<li>What is the scope of the API and who are the users?</li>
+	<li>What are the tactics that derive from your API strategy and objectives? (The tactics become clearer after all fields of the API Model Canvas are addressed).</li>
+</ul>
+
+<h3>Insert Your Data</h3>
+
+       	  
+<!-- {{#if currentUser}} -->	  
+	{{> addFormEntry}}
+	
+	<!--
+	<button onclick="openWin()">See what others wrote</button>
+	<a href="/00-ShowOthers.html" target="_blank">See what others wrote</a>
+	-->
+	<br>
+	
+	<input class="toggle-box" id="header1" type="checkbox" >
+	<label for="header1">Click here to see what others wrote.</label>
+	<div>
+		<ul>
+		  {{#each forms}}
+			{{> tmpForm}}
+		  {{/each}}
+
+		</ul>
+	</div>
+<!-- {{/if}} -->
+<br><br>
+<h3>Further Reading</h3>
+<a href="http://www.3scale.net/2015/01/effective-api-programs-apis-and-strategy/" target="_blank">Effective API Programs: APIs and Strategy</a><br>
+<a href="https://www.linkedin.com/pulse/api-strategy-tactic-manfred-bortenschlager" target="_blank">API Strategy vs. API Tactic </a><br>
+<a href="http://www.3scale.net/2012/11/building-great-apis-the-api-gold-standard-part-i/" target="_blank">Building Great APIs: The Gold Standard (I)</a><br>
+<a href="http://www.3scale.net/wp-content/uploads/2013/10/Winning-in-the-API-Economy-eBook-3scale.pdf" target="_blank">Winning in the API Economy</a><br>
+<br><br>
+</div>
+
+</template>
+
+
+<template name="tmpForm">
+	
+	{{# if sameOrg Organisation }}
+		<b>{{UserName}} from {{Organisation}} said: </b><br>
+		{{FormContent}}<br>
+	{{else}}
+		<!-- something -->
+		
+	{{/if}}
+
+</template>
+
+<template name="addFormEntry">
+    <form>
+        <!--<input type="text" name="Strategy" id="txtbox" align="top">-->
+		<textarea name="Strategy" id="txtbox"></textarea>
+		<br>
+        <input type="submit" value="Submit">
+	</form>
+	<form>	
+		<button onclick="fetchMyInput()">Get my previous input</button> 
+    </form>
+	<script>
+		function fetchMyInput() {
+			//var previousEntry = Forms.find({ UserName: "Manfred" }).fetch();
+			//console.log(previousEntry);
+				
+			document.getElementById("txtbox").innerHTML = "This is what I wrote previously in the Strategy field of the API Model Canvas";
+		}
+	</script>
+</template>

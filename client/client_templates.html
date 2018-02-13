@@ -1,0 +1,17 @@
+<template name="userdetails">
+{{#if currentUser}}  
+<div id="login_header">
+<span style="font-weight:bold"> USER: </span>{{> loginButtons}}
+<span style="font-weight:bold"> ORGANIZATION: </span>{{currentUser.profile.organization}}
+</div>
+{{/if}}
+</template>
+
+<template name="start">
+{{#if currentUser}}
+	{{> userdetails}}
+	{{> main}}
+{{else}}
+	{{> Login}}
+{{/if}}
+</template>
